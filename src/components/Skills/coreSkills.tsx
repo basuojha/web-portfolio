@@ -14,7 +14,6 @@ const CoreSkills: React.FC<SkillsProps> = ({ isInView }) => {
 
   useEffect(() => {
     if (isInView) {
-      console.log({ isInView });
       setExpandedSkills(allSkillGroups.map((_, index) => index));
     }
   }, [isInView]);
@@ -90,7 +89,7 @@ const CoreSkills: React.FC<SkillsProps> = ({ isInView }) => {
                     src={skillIcons[lang].src}
                     alt={skillIcons[lang].name}
                     title={skillIcons[lang].name}
-                    className="h-11 w-11 hover:brightness-125 transition-all duration-300"
+                    className="h-11 w-11 hover:brightness-125 transition-all duration-300 transform sm:hover:-translate-y-1 ease-in-out"
                   />
                 </motion.div>
               ))}

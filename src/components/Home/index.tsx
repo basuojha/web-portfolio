@@ -25,12 +25,11 @@ function Home() {
       </div>
 
       <div className="bg-gray-900 text-white h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth ">
-        {/* Home / Hero Section */}
         <section
           id="home"
           className="h-screen snap-start flex flex-col justify-center items-center px-4 sm:px-16 bg-gradient-to-b from-gray-900 to-gray-800 pt-[65px]"
         >
-          <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-8 sm:gap-24">
+          <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-8 sm:gap-44">
             <div className="flex flex-col gap-8 text-center sm:text-left">
               <h1 className="text-3xl sm:text-5xl">
                 Hello World! 👋🏻 <br className="sm:hidden" /> My name is Basu.
@@ -59,7 +58,10 @@ function Home() {
                 A Senior Software Developer with a knack for building
                 high-performance web applications using JavaScript, React, and
                 TypeScript. I turn complex challenges into elegant, scalable
-                solutions that elevate user experiences.
+                solutions that elevate user experiences. Passionate about
+                crafting seamless, intuitive UIs with industry-best practices
+                and modern frameworks. Always pushing the boundaries of web
+                performance, accessibility, and maintainability.
               </p>
             </div>
             {!isMobile && (
@@ -99,7 +101,7 @@ function Home() {
         )}
 
         <section
-          id="aboutMe"
+          id="about"
           className="h-screen snap-start flex items-center justify-center px-4 bg-gradient-to-b from-gray-700 to-gray-600"
         >
           <AboutMe />
