@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useGlobalContext } from "context/GlobalContext";
+import { useGlobalContext } from "contexts/GlobalContext";
 import CoreSkills from "./coreSkills";
 import SoftSkills from "./softSkills";
 

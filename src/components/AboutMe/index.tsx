@@ -1,6 +1,6 @@
 import React from "react";
 import AboutMeImage from "assets/images/aboutMe.svg";
-import { useGlobalContext } from "context/GlobalContext";
+import { useGlobalContext } from "contexts/GlobalContext";
 
 const AboutMe: React.FC = () => {
   const { isMobile } = useGlobalContext();

@@ -6,7 +6,7 @@ import Typewriter from "typewriter-effect";
 import { motion, useInView } from "framer-motion";
 import Skills from "components/Skills";
 import AboutMe from "components/AboutMe";
-import { useGlobalContext } from "context/GlobalContext";
+import { useGlobalContext } from "contexts/GlobalContext";
 import SoftSkills from "components/Skills/softSkills";
 
 function Home() {

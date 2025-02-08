@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { useGlobalContext } from "context/GlobalContext";
+import { useGlobalContext } from "contexts/GlobalContext";
 import skills from "constants/skills";
 
 interface SkillProps {

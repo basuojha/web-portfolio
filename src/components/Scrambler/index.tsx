@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import charset from "../../constants/allChars";
 import "@fontsource/jetbrains-mono";
-import { useGlobalContext } from "context/GlobalContext";
+import { useGlobalContext } from "contexts/GlobalContext";
 
 const Scrambler: React.FC = () => {
   const [displayText, setDisplayText] = useState<string>("");
