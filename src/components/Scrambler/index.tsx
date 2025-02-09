@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import charset from "../../constants/allChars";
-import "@fontsource/jetbrains-mono";
 import { useGlobalContext } from "contexts/GlobalContext";
 
 const Scrambler: React.FC = () => {
@@ -17,7 +16,7 @@ const Scrambler: React.FC = () => {
   };
 
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    let interval: ReturnType<typeof setInterval>;
     const lengthToShow = isMobile
       ? Math.floor(originalText.length / 2.5)
       : Math.floor(originalText.length / 1.5);

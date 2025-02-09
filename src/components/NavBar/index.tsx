@@ -20,6 +20,7 @@ const NavBar: React.FC = () => {
   const HamburgerMenu: React.FC = () => {
     return (
       <motion.div
+        data-testid="menu"
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.95 }}
         transition={{ duration: 0.5 }}
@@ -40,7 +41,7 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <div>
+    <div data-testid="navbar">
       <div className="flex flex-col sm:flex-row p-2 sm:p-0 px-8 sticky top-0 bg-gradient-to-r from-gray-900 to-gray-800 z-50 shadow-lg border-b border-gray-700">
         <div className=" text-[#eee] flex justify-between w-full items-center sm:p-4 sm:px-8">
           <img src={LogoSrc} alt="logo" className="h-12 sm:h-16" />
