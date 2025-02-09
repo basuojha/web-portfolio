@@ -21,7 +21,7 @@ jobs:
         run: yarn install
 
       - name: Test the project with Jest
-        run: yarn test -ci
+        run: yarn test-build --ci
 
       - name: Build the project
         run: yarn build
