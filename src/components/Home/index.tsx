@@ -30,18 +30,18 @@ function Home() {
           className="h-[100dvh] snap-start flex flex-col justify-center items-center px-4 sm:px-16 bg-gradient-to-b from-gray-900 to-gray-800 pt-[65px]"
         >
           <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-8 sm:gap-44">
-            <div className="flex flex-col gap-4 sm:gap-8 text-center sm:text-left">
+            <div className="flex flex-col gap-4 sm:gap-8 text-center sm:text-left items-center sm:items-start">
               <h1 className="text-2xl sm:text-5xl">
                 Hello World! 👋🏻 <br className="sm:hidden" /> My name is Basu.
               </h1>
-              <div className="text-lg sm:text-3xl">
+              <div className="text-lg sm:text-3xl h-[56px] sm:h-auto w-[60%]">
                 <Typewriter
                   options={{
                     strings: [
-                      "Welcome to my portfolio!",
+                      "Hi! Welcome to my portfolio!",
                       "Salut! Bienvenue sur mon portfolio!",
                       "Ciao! Benvenuto nel mio portfolio!",
-                      "नमस्ते! मेरे पोर्टफोलियो में आपका स्वागत है!",
+                      "Namaste! Mere portfolio main aapka swaagat hai!",
                       "Hi! Willkommen in meinem Portfolio!",
                     ],
                     autoStart: true,
