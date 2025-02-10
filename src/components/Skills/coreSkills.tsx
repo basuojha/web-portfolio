@@ -2,11 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import skills from "constants/skills";
 
-interface SkillsProps {
-  isInView: boolean;
-}
-
-const CoreSkills: React.FC<SkillsProps> = ({ isInView }) => {
+const CoreSkills: React.FC = () => {
   const { allSkillGroups, skillIcons } = skills;
 
   const containerVariants = {

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import NavBar from "components/NavBar";
 import Scrambler from "components/Scrambler";
 import ProfilePhoto from "components/ProfilePhoto";
@@ -11,8 +11,6 @@ import SoftSkills from "components/Skills/softSkills";
 
 function Home() {
   const { isMobile } = useGlobalContext();
-  const skillRef = useRef(null);
-  const isInView = useInView(skillRef);
 
   useEffect(() => {
     document.documentElement.style.scrollBehavior = "smooth";
@@ -74,7 +72,6 @@ function Home() {
 
         <section
           id="skills"
-          ref={skillRef}
           className="h-[100dvh] snap-start flex flex-col justify-center pt-[65px] sm:pt-0 items-center px-4 bg-gradient-to-b from-gray-800 to-gray-700"
         >
           <div className="w-full max-w-4xl sm:max-w-full sm:px-16">
@@ -89,7 +86,7 @@ function Home() {
             >
               <h2 className="text-2xl sm:text-4xl text-white">Skills</h2>
             </motion.div>
-            <Skills isInView={isInView} />
+            <Skills />
           </div>
         </section>
         {isMobile && (

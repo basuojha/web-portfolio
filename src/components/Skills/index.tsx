@@ -4,11 +4,7 @@ import { useGlobalContext } from "contexts/GlobalContext";
 import CoreSkills from "./coreSkills";
 import SoftSkills from "./softSkills";
 
-interface SkillsProps {
-  isInView: boolean;
-}
-
-const Skills: React.FC<SkillsProps> = ({ isInView }) => {
+const Skills: React.FC = () => {
   const { isMobile } = useGlobalContext();
 
   return (
@@ -22,8 +18,8 @@ const Skills: React.FC<SkillsProps> = ({ isInView }) => {
         bounce: 0,
       }}
     >
-      <CoreSkills isInView={isInView} />
-      {!isMobile && <SoftSkills isInView={isInView} />}
+      <CoreSkills />
+      {!isMobile && <SoftSkills />}
     </motion.div>
   );
 };
