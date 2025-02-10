@@ -7,7 +7,7 @@
       "components/*": ["components/*"],
       "contexts/*": ["contexts/*"]
     },
-    "target": "es5",
+    "target": "ESNext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
