@@ -27,8 +27,8 @@ test("render Typewriter", async () => {
   );
 
   const typewriterEl = await waitFor(
-    () => screen.getByText("Welcome to my portfolio!"),
+    () => screen.getByText("Hi! Welcome to my portfolio!"),
     { timeout: 5000 }
   );
-  expect(typewriterEl.textContent).toBe("Welcome to my portfolio!");
+  expect(typewriterEl.textContent).toBe("Hi! Welcome to my portfolio!");
 });
