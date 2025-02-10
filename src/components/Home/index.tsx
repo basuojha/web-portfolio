@@ -54,7 +54,7 @@ function Home() {
                   <ProfilePhoto />
                 </div>
               )}
-              <p className="pt-4 px-8 sm:pt-0 sm:px-0 text-sm sm:text-xl text-justify">
+              <p className="pt-2 px-8 sm:pt-0 sm:px-0 text-sm sm:text-xl text-justify">
                 A Senior Software Developer with a knack for building
                 high-performance web applications using JavaScript, React, and
                 TypeScript. I turn complex challenges into elegant, scalable
@@ -78,9 +78,17 @@ function Home() {
           className="h-[100dvh] snap-start flex flex-col justify-center pt-[65px] sm:pt-0 items-center px-4 bg-gradient-to-b from-gray-800 to-gray-700"
         >
           <div className="w-full max-w-4xl sm:max-w-full sm:px-16">
-            <div className="flex justify-center sm:justify-start w-full">
+            <motion.div
+              transition={{
+                type: "tween",
+                duration: 0.3,
+                ease: "easeInOut",
+                bounce: 0,
+              }}
+              className="flex justify-center sm:justify-start w-full"
+            >
               <h2 className="text-2xl sm:text-4xl text-white">Skills</h2>
-            </div>
+            </motion.div>
             <Skills isInView={isInView} />
           </div>
         </section>
@@ -90,19 +98,19 @@ function Home() {
             className="h-[100dvh] pt-[65px] sm:pt-0 snap-start flex flex-col justify-center items-center px-4 bg-gradient-to-b from-gray-800 to-gray-700"
           >
             <div className="w-full max-w-4xl sm:max-w-full sm:px-16">
-              <div className="flex justify-center sm:justify-start w-full pb-8">
+              <div className="flex justify-center sm:justify-start w-full pb-4 sm:pb-8">
                 <h2 className="text-2xl sm:text-4xl text-white">
                   Other Skills
                 </h2>
               </div>
-              <SoftSkills isInView={isInView} />
+              <SoftSkills />
             </div>
           </section>
         )}
 
         <section
           id="about"
-          className="h-[100dvh] snap-start flex items-center justify-center px-4 bg-gradient-to-b from-gray-700 to-gray-600"
+          className="h-[100dvh] pt-[65px] sm:pt-0 snap-start flex items-center justify-center px-4 bg-gradient-to-b from-gray-700 to-gray-600"
         >
           <AboutMe />
         </section>

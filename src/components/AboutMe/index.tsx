@@ -9,7 +9,7 @@ const AboutMe: React.FC = () => {
       <span className="text-2xl sm:text-4xl">About Me</span>
       <div className="flex gap-8 items-start flex-col sm:flex-row">
         <div className="flex-2 text-justify ">
-          <p className="pt-8 sm:pt-8">
+          <p className="pt-4 sm:pt-8">
             Hi, I’m Basu—a passionate Senior Frontend Developer specializing in
             React.js, JavaScript, and scalable UI architecture. With over four
             years of experience, I’ve built high-performance, visually
