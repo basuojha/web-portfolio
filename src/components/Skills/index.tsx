@@ -13,7 +13,7 @@ const Skills: React.FC<SkillsProps> = ({ isInView }) => {
 
   return (
     <motion.div
-      className="flex flex-col md:flex-row w-full px-4 md:px-8 lg:px-0 gap-8 pt-6 sm:pt-8"
+      className="flex flex-col md:flex-row w-full px-4 md:px-8 lg:px-0 gap-8 pt-4 sm:pt-8"
       layout
       transition={{
         type: "tween",

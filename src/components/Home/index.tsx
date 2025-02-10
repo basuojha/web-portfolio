@@ -24,14 +24,14 @@ function Home() {
         <NavBar />
       </div>
 
-      <div className="bg-gray-900 text-white h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth ">
+      <div className="bg-gray-900 text-white h-[100dvh] overflow-y-scroll snap-y snap-mandatory scroll-smooth ">
         <section
           id="home"
-          className="h-screen snap-start flex flex-col justify-center items-center px-4 sm:px-16 bg-gradient-to-b from-gray-900 to-gray-800 pt-[65px]"
+          className="h-[100dvh] snap-start flex flex-col justify-center items-center px-4 sm:px-16 bg-gradient-to-b from-gray-900 to-gray-800 pt-[65px]"
         >
           <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-8 sm:gap-44">
-            <div className="flex flex-col gap-8 text-center sm:text-left">
-              <h1 className="text-3xl sm:text-5xl">
+            <div className="flex flex-col gap-4 sm:gap-8 text-center sm:text-left">
+              <h1 className="text-2xl sm:text-5xl">
                 Hello World! 👋🏻 <br className="sm:hidden" /> My name is Basu.
               </h1>
               <div className="text-lg sm:text-3xl">
@@ -50,11 +50,11 @@ function Home() {
                 />
               </div>
               {isMobile && (
-                <div className="mt-6">
+                <div className="mt-2 sm:mt-6">
                   <ProfilePhoto />
                 </div>
               )}
-              <p className="pt-4 px-8 sm:pt-0 sm:px-0 text-base sm:text-xl text-justify">
+              <p className="pt-4 px-8 sm:pt-0 sm:px-0 text-sm sm:text-xl text-justify">
                 A Senior Software Developer with a knack for building
                 high-performance web applications using JavaScript, React, and
                 TypeScript. I turn complex challenges into elegant, scalable
@@ -75,7 +75,7 @@ function Home() {
         <section
           id="skills"
           ref={skillRef}
-          className="h-screen snap-start flex flex-col justify-center items-center px-4 bg-gradient-to-b from-gray-800 to-gray-700"
+          className="h-[100dvh] snap-start flex flex-col justify-center pt-[65px] sm:pt-0 items-center px-4 bg-gradient-to-b from-gray-800 to-gray-700"
         >
           <div className="w-full max-w-4xl sm:max-w-full sm:px-16">
             <div className="flex justify-center sm:justify-start w-full">
@@ -87,7 +87,7 @@ function Home() {
         {isMobile && (
           <section
             id="softSkills"
-            className="h-screen snap-start flex flex-col justify-center items-center px-4 bg-gradient-to-b from-gray-800 to-gray-700"
+            className="h-[100dvh] pt-[65px] sm:pt-0 snap-start flex flex-col justify-center items-center px-4 bg-gradient-to-b from-gray-800 to-gray-700"
           >
             <div className="w-full max-w-4xl sm:max-w-full sm:px-16">
               <div className="flex justify-center sm:justify-start w-full pb-8">
@@ -102,7 +102,7 @@ function Home() {
 
         <section
           id="about"
-          className="h-screen snap-start flex items-center justify-center px-4 bg-gradient-to-b from-gray-700 to-gray-600"
+          className="h-[100dvh] snap-start flex items-center justify-center px-4 bg-gradient-to-b from-gray-700 to-gray-600"
         >
           <AboutMe />
         </section>

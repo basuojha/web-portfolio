@@ -59,8 +59,8 @@ const CoreSkills: React.FC<SkillsProps> = ({ isInView }) => {
                 bounce: 0,
               }}
               onClick={() => toggleSkill(index)}
-              className={`rounded-lg px-4 py-2 w-48 transition-all duration-300 ease-out text-sm sm:text-base
-            bg-gray-700 text-gray-300 sm:hover:shadow-2xl sm:hover:brightness-125 h-10 mt-2 sm:hover:font-semibold
+              className={`rounded-lg px-2 sm:px-4 py-2 sm:py-2 w-48 transition-all duration-300 ease-out text-sm sm:text-base
+            bg-gray-700 text-gray-300 sm:hover:shadow-2xl sm:hover:brightness-125 sm:h-10 mt-0 sm:mt-2 sm:hover:font-semibold
             ${isExpanded ? "bg-slate-600 text-white font-semibold" : ""}`}
             >
               {skill.name}
@@ -89,7 +89,7 @@ const CoreSkills: React.FC<SkillsProps> = ({ isInView }) => {
                     src={skillIcons[lang].src}
                     alt={skillIcons[lang].name}
                     title={skillIcons[lang].name}
-                    className="h-11 w-11 hover:brightness-125 transition-all duration-300 transform sm:hover:-translate-y-1 ease-in-out"
+                    className="w-8 h-8 sm:h-11 sm:w-11 hover:brightness-125 transition-all duration-300 transform sm:hover:-translate-y-1 ease-in-out"
                   />
                 </motion.div>
               ))}
