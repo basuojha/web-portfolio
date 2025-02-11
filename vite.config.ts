@@ -1,6 +1,6 @@
-import { defineConfig } from "vite";
-import path from "path";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite';
+import path from 'path';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
@@ -8,14 +8,14 @@ export default defineConfig({
     port: 3000,
   },
   build: {
-    outDir: "dist",
+    outDir: 'dist',
   },
   resolve: {
     alias: {
-      assets: path.resolve(__dirname, "src/assets"),
-      constants: path.resolve(__dirname, "src/constants"),
-      components: path.resolve(__dirname, "src/components"),
-      contexts: path.resolve(__dirname, "src/contexts"),
+      assets: path.resolve(__dirname, 'src/assets'),
+      constants: path.resolve(__dirname, 'src/constants'),
+      components: path.resolve(__dirname, 'src/components'),
+      contexts: path.resolve(__dirname, 'src/contexts'),
     },
   },
 });

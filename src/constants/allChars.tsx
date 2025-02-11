@@ -1,4 +1,3 @@
-const charset =
-  "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 export default charset;

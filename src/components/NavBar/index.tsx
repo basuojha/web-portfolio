@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import LogoSrc from "assets/logos/logo.svg";
-import { Menu as MenuIcon } from "lucide-react";
-import { motion } from "framer-motion";
+import React, { useState } from 'react';
+import LogoSrc from 'assets/logos/logo.svg';
+import { Menu as MenuIcon } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface NavTab {
   label: string;
@@ -9,10 +9,10 @@ interface NavTab {
 }
 
 const navTabs: NavTab[] = [
-  { label: "About Me", id: "about" },
-  { label: "Experiences", id: "experience" },
-  { label: "Projects", id: "projects" },
-  { label: "Contact", id: "contact" },
+  { label: 'About Me', id: 'about' },
+  { label: 'Experiences', id: 'experience' },
+  { label: 'Projects', id: 'projects' },
+  { label: 'Contact', id: 'contact' },
 ];
 
 const NavBar: React.FC = () => {
@@ -55,7 +55,7 @@ const NavBar: React.FC = () => {
           {!menuOpen && (
             <div
               className={`${
-                menuOpen ? "block" : "hidden"
+                menuOpen ? 'block' : 'hidden'
               } sm:flex flex-col sm:flex-row gap-4 sm:gap-6 text-lg`}
             >
               {navTabs.map((tab, index) => (

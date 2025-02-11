@@ -1,5 +1,5 @@
-import React from "react";
-import profileSrc from "assets/images/profile.jpg";
+import React from 'react';
+import profileSrc from 'assets/images/profile.jpg';
 
 const ProfilePhoto: React.FC = () => {
   return (

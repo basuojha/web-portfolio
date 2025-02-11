@@ -1,13 +1,13 @@
-import Home from "components/Home";
-import { GlobalProvider } from "contexts/GlobalContext";
+import React from 'react';
+import Home from 'components/Home';
+import { GlobalProvider } from 'contexts/GlobalContext';
 
-function App() {
-  console.log("App started");
+const App: React.FC = () => {
   return (
     <GlobalProvider>
       <Home />
     </GlobalProvider>
   );
-}
+};
 
 export default App;

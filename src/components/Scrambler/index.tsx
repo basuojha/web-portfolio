@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from "react";
-import charset from "../../constants/allChars";
-import { useGlobalContext } from "contexts/GlobalContext";
+import React, { useState, useEffect } from 'react';
+import charset from '../../constants/allChars';
+import { useGlobalContext } from 'contexts/GlobalContext';
 
 const Scrambler: React.FC = () => {
-  const [displayText, setDisplayText] = useState<string>("");
+  const [displayText, setDisplayText] = useState<string>('');
   const [hovered, setHovered] = useState<boolean>(false);
   const { isMobile } = useGlobalContext();
   const originalText: string = `Caught you! — your friendly neighborhood developer 🧑🏻‍💻  `;
 
   const getRandomText = (length: number) => {
-    return Array.from(
-      { length },
-      () => charset[Math.floor(Math.random() * charset.length)]
-    ).join("");
+    return Array.from({ length }, () => charset[Math.floor(Math.random() * charset.length)]).join(
+      ''
+    );
   };
 
   useEffect(() => {

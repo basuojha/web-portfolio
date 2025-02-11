@@ -1,17 +1,18 @@
-import { render, screen } from "@testing-library/react";
-import NavBar from "components/NavBar";
-import userEvent from "@testing-library/user-event";
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import NavBar from 'components/NavBar';
+import userEvent from '@testing-library/user-event';
 
-test("renders Navbar", () => {
+test('renders Navbar', () => {
   render(<NavBar />);
-  const navbarEl = screen.getByTestId("navbar");
+  const navbarEl = screen.getByTestId('navbar');
   expect(navbarEl).toBeInTheDocument();
 });
 
-test("renders hamburger menu", async () => {
+test('renders hamburger menu', async () => {
   render(<NavBar />);
   const user = userEvent.setup();
-  const hamburgerMenuEl = screen.getByRole("button");
+  const hamburgerMenuEl = screen.getByRole('button');
   await user.click(hamburgerMenuEl);
-  expect(screen.getByTestId("menu")).toBeInTheDocument();
+  expect(screen.getByTestId('menu')).toBeInTheDocument();
 });

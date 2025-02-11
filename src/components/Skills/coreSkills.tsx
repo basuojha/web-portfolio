@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import skills from "constants/skills";
+import React from 'react';
+import { motion } from 'framer-motion';
+import skills from 'constants/skills';
 
 const CoreSkills: React.FC = () => {
   const { allSkillGroups, skillIcons } = skills;
@@ -27,9 +27,9 @@ const CoreSkills: React.FC = () => {
             className="relative flex flex-col md:flex-row items-center min-h-12 gap-6"
             layout
             transition={{
-              type: "tween",
+              type: 'tween',
               duration: 0.3,
-              ease: "easeInOut",
+              ease: 'easeInOut',
               bounce: 0,
             }}
           >

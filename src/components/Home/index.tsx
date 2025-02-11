@@ -1,20 +1,16 @@
-import React, { useEffect } from "react";
-import NavBar from "components/NavBar";
-import Scrambler from "components/Scrambler";
-import ProfilePhoto from "components/ProfilePhoto";
-import Typewriter from "typewriter-effect";
-import { motion, useInView } from "framer-motion";
-import Skills from "components/Skills";
-import AboutMe from "components/AboutMe";
-import { useGlobalContext } from "contexts/GlobalContext";
-import SoftSkills from "components/Skills/softSkills";
+import React, { JSX } from 'react';
+import NavBar from 'components/NavBar';
+import Scrambler from 'components/Scrambler';
+import ProfilePhoto from 'components/ProfilePhoto';
+import Typewriter from 'typewriter-effect';
+import { motion } from 'framer-motion';
+import Skills from 'components/Skills';
+import AboutMe from 'components/AboutMe';
+import { useGlobalContext } from 'contexts/GlobalContext';
+import SoftSkills from 'components/Skills/softSkills';
 
-function Home() {
+function Home(): JSX.Element {
   const { isMobile } = useGlobalContext();
-
-  useEffect(() => {
-    document.documentElement.style.scrollBehavior = "smooth";
-  }, []);
 
   return (
     <div className="relative">
@@ -36,11 +32,11 @@ function Home() {
                 <Typewriter
                   options={{
                     strings: [
-                      "Hi! Welcome to my portfolio!",
-                      "Salut! Bienvenue sur mon portfolio!",
-                      "Ciao! Benvenuto nel mio portfolio!",
-                      "Namaste! Mere portfolio main aapka swaagat hai!",
-                      "Hi! Willkommen in meinem Portfolio!",
+                      'Hi! Welcome to my portfolio!',
+                      'Salut! Bienvenue sur mon portfolio!',
+                      'Ciao! Benvenuto nel mio portfolio!',
+                      'Namaste! Mere portfolio main aapka swaagat hai!',
+                      'Hi! Willkommen in meinem Portfolio!',
                     ],
                     autoStart: true,
                     loop: true,
@@ -53,13 +49,11 @@ function Home() {
                 </div>
               )}
               <p className="pt-2 px-8 sm:pt-0 sm:px-0 text-sm sm:text-xl text-justify">
-                A Senior Software Developer with a knack for building
-                high-performance web applications using JavaScript, React, and
-                TypeScript. I turn complex challenges into elegant, scalable
-                solutions that elevate user experiences. Passionate about
-                crafting seamless, intuitive UIs with industry-best practices
-                and modern frameworks. Always pushing the boundaries of web
-                performance, accessibility, and maintainability.
+                A Senior Software Developer with a knack for building high-performance web
+                applications using JavaScript, React, and TypeScript. I turn complex challenges into
+                elegant, scalable solutions that elevate user experiences. Passionate about crafting
+                seamless, intuitive UIs with industry-best practices and modern frameworks. Always
+                pushing the boundaries of web performance, accessibility, and maintainability.
               </p>
             </div>
             {!isMobile && (
@@ -77,9 +71,9 @@ function Home() {
           <div className="w-full max-w-4xl sm:max-w-full sm:px-16">
             <motion.div
               transition={{
-                type: "tween",
+                type: 'tween',
                 duration: 0.3,
-                ease: "easeInOut",
+                ease: 'easeInOut',
                 bounce: 0,
               }}
               className="flex justify-center sm:justify-start w-full"
@@ -96,9 +90,7 @@ function Home() {
           >
             <div className="w-full max-w-4xl sm:max-w-full sm:px-16">
               <div className="flex justify-center sm:justify-start w-full pb-4 sm:pb-8">
-                <h2 className="text-2xl sm:text-4xl text-white">
-                  Other Skills
-                </h2>
+                <h2 className="text-2xl sm:text-4xl text-white">Other Skills</h2>
               </div>
               <SoftSkills />
             </div>
@@ -116,9 +108,7 @@ function Home() {
         </section>
 
         <footer className="bg-gray-800 p-6 text-center text-white snap-start">
-          <p className="text-sm">
-            © {new Date().getFullYear()} Basu Ojha. All rights reserved.
-          </p>
+          <p className="text-sm">© {new Date().getFullYear()} Basu Ojha. All rights reserved.</p>
         </footer>
       </div>
     </div>

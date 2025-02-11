@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { useGlobalContext } from "contexts/GlobalContext";
-import skills from "constants/skills";
+import React from 'react';
+import { motion } from 'framer-motion';
+import skills from 'constants/skills';
 
 const SoftSkills: React.FC = () => {
   const { softSkills } = skills;
@@ -24,7 +23,7 @@ const SoftSkills: React.FC = () => {
       animate="show"
       exit="hidden"
     >
-      {softSkills.map((skill, index) => (
+      {softSkills.map((skill) => (
         <motion.button
           key={skill}
           variants={itemVariants}

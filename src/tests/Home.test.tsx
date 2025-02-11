@@ -1,12 +1,10 @@
+import React from 'react';
 global.IntersectionObserver = class {
   root = null;
-  rootMargin = "";
+  rootMargin = '';
   thresholds = [];
 
-  constructor(
-    callback: IntersectionObserverCallback,
-    options: IntersectionObserverInit = {}
-  ) {}
+  constructor() {}
   observe() {}
   unobserve() {}
   disconnect() {}
@@ -15,20 +13,19 @@ global.IntersectionObserver = class {
   }
 };
 
-import { render, screen, waitFor } from "@testing-library/react";
-import Home from "components/Home";
-import { GlobalProvider } from "contexts/GlobalContext";
+import { render, screen, waitFor } from '@testing-library/react';
+import Home from 'components/Home';
+import { GlobalProvider } from 'contexts/GlobalContext';
 
-test("render Typewriter", async () => {
+test('render Typewriter', async () => {
   render(
     <GlobalProvider>
       <Home />
     </GlobalProvider>
   );
 
-  const typewriterEl = await waitFor(
-    () => screen.getByText("Hi! Welcome to my portfolio!"),
-    { timeout: 5000 }
-  );
-  expect(typewriterEl.textContent).toBe("Hi! Welcome to my portfolio!");
+  const typewriterEl = await waitFor(() => screen.getByText('Hi! Welcome to my portfolio!'), {
+    timeout: 5000,
+  });
+  expect(typewriterEl.textContent).toBe('Hi! Welcome to my portfolio!');
 });
