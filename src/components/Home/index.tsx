@@ -1,4 +1,4 @@
-import React, { JSX } from 'react';
+import React from 'react';
 import NavBar from 'components/NavBar';
 import Scrambler from 'components/Scrambler';
 import ProfilePhoto from 'components/ProfilePhoto';
@@ -8,8 +8,11 @@ import Skills from 'components/Skills';
 import AboutMe from 'components/AboutMe';
 import { useGlobalContext } from 'contexts/GlobalContext';
 import SoftSkills from 'components/Skills/softSkills';
+import Experience from 'components/Experience';
+import Contact from 'components/Contact';
+import Projects from 'components/Projects';
 
-function Home(): JSX.Element {
+const Home: React.FC = () => {
   const { isMobile } = useGlobalContext();
 
   return (
@@ -28,7 +31,7 @@ function Home(): JSX.Element {
               <h1 className="text-2xl sm:text-5xl">
                 Hello World! 👋🏻 <br className="sm:hidden" /> My name is Basu.
               </h1>
-              <div className="text-lg sm:text-3xl h-[56px] sm:h-auto w-[60%]">
+              <div className="text-lg sm:text-3xl h-[56px] sm:h-auto w-[60%] sm:w-full">
                 <Typewriter
                   options={{
                     strings: [
@@ -48,7 +51,7 @@ function Home(): JSX.Element {
                   <ProfilePhoto />
                 </div>
               )}
-              <p className="pt-2 px-8 sm:pt-0 sm:px-0 text-sm sm:text-xl text-justify">
+              <p className="pt-2 px-4 sm:pt-0 sm:px-0 text-sm sm:text-xl text-justify">
                 A Senior Software Developer with a knack for building high-performance web
                 applications using JavaScript, React, and TypeScript. I turn complex challenges into
                 elegant, scalable solutions that elevate user experiences. Passionate about crafting
@@ -86,7 +89,7 @@ function Home(): JSX.Element {
         {isMobile && (
           <section
             id="softSkills"
-            className="h-[100dvh] pt-[65px] sm:pt-0 snap-start flex flex-col justify-center items-center px-4 bg-gradient-to-b from-gray-800 to-gray-700"
+            className="h-[100dvh] pt-[65px] sm:pt-0 snap-start flex flex-col justify-center items-center px-4 bg-gradient-to-b from-gray-900 to-gray-800"
           >
             <div className="w-full max-w-4xl sm:max-w-full sm:px-16">
               <div className="flex justify-center sm:justify-start w-full pb-4 sm:pb-8">
@@ -99,9 +102,27 @@ function Home(): JSX.Element {
 
         <section
           id="about"
-          className="h-[100dvh] pt-[65px] sm:pt-0 snap-start flex items-center justify-center px-4 bg-gradient-to-b from-gray-700 to-gray-600"
+          className="h-[100dvh] pt-[65px] sm:pt-0 snap-start flex items-center justify-center px-4 bg-gradient-to-b from-gray-800 to-gray-700"
         >
           <AboutMe />
+        </section>
+        <section
+          id="experience"
+          className="h-[100dvh] pt-[65px] sm:pt-0 snap-start flex items-center justify-center px-4 bg-gradient-to-b  from-gray-900 to-gray-800"
+        >
+          <Experience />
+        </section>
+        <section
+          id="projects"
+          className="h-[100dvh] pt-[65px] sm:pt-0 snap-start flex items-center justify-center px-4 bg-gradient-to-b  from-gray-900 to-gray-800"
+        >
+          <Projects />
+        </section>
+        <section
+          id="contact"
+          className="h-[100dvh] pt-[65px] sm:pt-0 snap-start flex items-center justify-center px-4 bg-gradient-to-b  from-gray-800 to-gray-700"
+        >
+          <Contact />
         </section>
         <section className=" flex items-center justify-center">
           <Scrambler />
@@ -113,6 +134,6 @@ function Home(): JSX.Element {
       </div>
     </div>
   );
-}
+};
 
 export default Home;

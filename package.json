@@ -5,6 +5,7 @@
   "type": "module",
   "dependencies": {
     "@fontsource/jetbrains-mono": "^5.1.2",
+    "@formspree/react": "^2.5.1",
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^27.0.1",
     "@types/node": "^22.13.1",

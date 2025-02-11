@@ -30,8 +30,6 @@ const SoftSkills: React.FC = () => {
           className="flex justify-center items-center h-18 rounded-lg px-4 sm:px-4 py-4 w-[40%] sm:w-48 text-sm
         bg-slate-600 text-white sm:hover:shadow-2xl sm:hover:brightness-125 sm:hover:font-semibold"
         >
-          {' '}
-          Hi
           {skill}
         </motion.button>
       ))}
