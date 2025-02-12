@@ -39,7 +39,7 @@ Welcome to the source code for my personal portfolio website, built with **React
 
 ## 🌐 **View the Live Portfolio**
 
-Check out the live version of my portfolio: [Basu Ojha's Portfolio](https://basuojha.dev)
+Check out the live version of my portfolio: [basuojha.dev](https://basuojha.dev)
 
 ---
 
@@ -66,16 +66,22 @@ To run this project locally:
 
 2.  Install dependencies:
 
+    ```bash
     cd portfolio
     yarn install
 
-3.          Run the development server:
+    ```
 
+3.  Run the development server:
+
+    ```bash
     yarn start
+
+    ```
 
 4.  Open the app in your browser at http://localhost:3000
 
-🧹 Code Quality Tools
+## 🧹 **Code Quality Tools**
 
 This repository ensures high code quality using the following tools:
 • Husky: Automatically runs checks before commits.
@@ -83,13 +89,13 @@ This repository ensures high code quality using the following tools:
 • Prettier: Formats the code consistently.
 • Jest: Used for writing and running unit tests to ensure correctness.
 
-🔒 Security
+## 🔒 **Security**
 
 This repository follows industry-standard security practices by using:
 • AWS S3 with restricted bucket permissions.
 • CloudFront with HTTPS to ensure encrypted communication.
 
-📂 Folder Structure
+## 📂 **Folder Structure**
 
 Here is the structure of the project:
 
@@ -106,9 +112,12 @@ Here is the structure of the project:
     |-- /tailwind.config.js # Tailwind CSS configuration
     |-- /tsconfig.json      # TypeScript configuration
 
-📧 Contact Me
+## 📧 **Contact Me**
 
 Feel free to reach out if you have any questions:
-• Email: basuojha25@gmail.com
-• LinkedIn: linkedin.com/in/basu-ojha
-• GitHub: github.com/basuojha
+
+• **Email**: basuojha25@gmail.com
+
+• **LinkedIn**: linkedin.com/in/basu-ojha
+
+• **GitHub**: github.com/basuojha
