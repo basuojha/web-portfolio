@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import LogoSrc from 'assets/logos/logo.svg';
 import { Menu as MenuIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useClickAway } from 'react-use';
 
 interface NavTab {
   label: string;
@@ -17,63 +18,64 @@ const navTabs: NavTab[] = [
 
 const NavBar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const HamburgerMenu: React.FC = () => {
-    return (
-      <motion.div
-        data-testid="menu"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.95 }}
-        transition={{ duration: 0.5 }}
-        className="bg-gradient-to-r from-gray-900 to-gray-800 absolute right-0 flex flex-col z-50 rounded-b-lg gap-2 p-2 text-white"
-      >
-        {navTabs.map((tab, index) => (
-          <a
-            href={`#${tab.id}`}
-            key={index}
-            className="rounded-lg px-4 py-2 duration-300 ease-out"
-            onClick={() => setMenuOpen(false)}
-          >
-            {tab.label}
-          </a>
-        ))}
-      </motion.div>
-    );
-  };
+  const menuRef = useRef<HTMLDivElement | null>(null);
+  const buttonRef = useRef<HTMLButtonElement | null>(null);
+
+  useClickAway(menuRef, (event) => {
+    if (buttonRef.current && buttonRef.current.contains(event.target as Node)) {
+      return;
+    }
+    setMenuOpen(false);
+  });
 
   return (
-    <div data-testid="navbar">
-      <div className="flex flex-col sm:flex-row p-2 sm:p-0 px-8 sticky top-0 bg-gradient-to-r from-gray-900 to-gray-800 z-50 shadow-lg border-b border-gray-700">
-        <div className=" text-[#eee] flex justify-between w-full items-center sm:p-4 sm:px-8">
-          <img src={LogoSrc} alt="logo" className="h-12 sm:h-16" />
-          {/* Hamburger Icon */}
-          <button
-            className="sm:hidden flex items-center text-white"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <MenuIcon />
-          </button>
-          {!menuOpen && (
-            <div
-              className={`${
-                menuOpen ? 'block' : 'hidden'
-              } sm:flex flex-col sm:flex-row gap-4 sm:gap-6 text-lg`}
+    <nav
+      data-testid="navbar"
+      className="bg-gradient-to-r from-gray-900 to-gray-800 z-50 shadow-lg border-b border-gray-700 sticky top-0"
+    >
+      <div className="flex justify-between items-center px-8 sm:px-8 py-2 sm:py-4">
+        <img src={LogoSrc} alt="logo" className="h-12 md:h-16" />
+        <div className="hidden xl:flex space-x-6">
+          {navTabs.map((tab) => (
+            <a
+              key={tab.id}
+              href={`#${tab.id}`}
+              className="text-white px-4 py-2 rounded-lg transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-gray-700 hover:text-gray-300"
             >
-              {navTabs.map((tab, index) => (
-                <a
-                  href={`#${tab.id}`}
-                  key={index}
-                  className="rounded-lg px-4 py-2 transition-all duration-300 ease-out transform hover:-translate-y-1 hover:opacity-100 hover:bg-gray-700 hover:text-gray-300 hover:font-semibold"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {tab.label}
-                </a>
-              ))}
-            </div>
-          )}
+              {tab.label}
+            </a>
+          ))}
         </div>
+        <button
+          ref={buttonRef}
+          className="xl:hidden text-white"
+          onClick={() => setMenuOpen((prev) => !prev)}
+        >
+          <MenuIcon />
+        </button>
       </div>
-      {menuOpen && <HamburgerMenu />}
-    </div>
+      {menuOpen && (
+        <motion.div
+          ref={menuRef}
+          data-testid="menu"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.96 }}
+          transition={{ duration: 0.3 }}
+          className="bg-gradient-to-r from-gray-900 to-gray-800 absolute right-0 flex flex-col z-50 rounded-b-lg gap-2 p-2 text-white"
+        >
+          {navTabs.map((tab) => (
+            <a
+              key={tab.id}
+              href={`#${tab.id}`}
+              className="px-4 py-2 rounded-lg transition duration-300 hover:bg-gray-700"
+              onClick={() => setMenuOpen(false)}
+            >
+              {tab.label}
+            </a>
+          ))}
+        </motion.div>
+      )}
+    </nav>
   );
 };
 

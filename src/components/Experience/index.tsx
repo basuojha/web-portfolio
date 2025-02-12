@@ -6,9 +6,9 @@ import { Briefcase } from 'lucide-react';
 const Experience: React.FC = () => {
   const { experienceList } = experiences;
   return (
-    <div className="px-4 sm:px-0 w-full">
-      <div className="flex items-center justify-center sm:items-start sm:justify-start">
-        <h2 className="text-2xl md:text-4xl text-center mb-4 sm:mb-8">Experience</h2>
+    <div className="px-4 xl:px-0 w-full">
+      <div className="flex items-center justify-center xl:items-start xl:justify-start">
+        <h2 className="text-2xl md:text-4xl text-center mb-4 xl:mb-8">Experience</h2>
       </div>
       <div className="relative overflow-hidden">
         <motion.div
@@ -24,7 +24,7 @@ const Experience: React.FC = () => {
             `}
             >
               <div className="flex gap-4 justify-between">
-                <h3 className="text-base w-[80%] sm:text-xl font-semibold">{exp.title}</h3>
+                <h3 className="text-base w-[80%] xl:text-xl font-semibold">{exp.title}</h3>
                 <Briefcase className="h-6 w-6" />
               </div>
               <p className="text-gray-400 mt-1">{exp.company}</p>
@@ -51,7 +51,7 @@ const Experience: React.FC = () => {
             `}
             >
               <div className="flex gap-4 justify-between">
-                <h3 className="text-base sm:text-xl font-semibold w-[80%]">{edu.title}</h3>
+                <h3 className="text-base xl:text-xl font-semibold w-[80%]">{edu.title}</h3>
                 <GraduationCap className="h-6 w-6" />
               </div>
               <p className="text-gray-400 mt-1">{edu.university}</p>

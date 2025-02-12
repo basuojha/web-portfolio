@@ -36,7 +36,7 @@ const Scrambler: React.FC = () => {
       className="flex items-center justify-center flex-col gap-2 rounded-lg mx-4 cursor-help"
     >
       <div className="flex items-center text-center flex-col">
-        <div className="text-base sm:text-2xl transition-all duration-500 ease-out px-2 py-4 min-h-24 flex items-center">
+        <div className="text-base xl:text-2xl transition-all duration-500 ease-out px-2 py-4 min-h-24 flex items-center">
           {displayText}
         </div>
       </div>

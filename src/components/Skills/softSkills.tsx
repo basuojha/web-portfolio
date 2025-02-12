@@ -17,7 +17,7 @@ const SoftSkills: React.FC = () => {
 
   return (
     <motion.div
-      className={`flex flex-wrap gap-4  sm:px-0 w-full md:w-1/2 justify-center md:justify-start`}
+      className={`flex flex-wrap gap-4  xl:px-0 w-full md:w-1/2 justify-center md:justify-start`}
       variants={containerVariants}
       initial="hidden"
       animate="show"
@@ -27,8 +27,8 @@ const SoftSkills: React.FC = () => {
         <motion.button
           key={skill}
           variants={itemVariants}
-          className="flex justify-center items-center h-18 rounded-lg px-4 sm:px-4 py-4 w-[40%] sm:w-48 text-sm
-        bg-slate-600 text-white sm:hover:shadow-2xl sm:hover:brightness-125 sm:hover:font-semibold"
+          className="flex justify-center items-center h-18 rounded-lg px-4 xl:px-4 py-4 w-[40%] xl:w-48 text-sm
+        bg-slate-600 text-white xl:hover:shadow-2xl xl:hover:brightness-125 xl:hover:font-semibold"
         >
           {skill}
         </motion.button>
