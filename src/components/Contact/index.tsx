@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, CircleCheck } from 'lucide-react';
 import { useForm, ValidationError } from '@formspree/react';
 import gitHubIcon from 'assets/icons/github.svg';
-import linkedInIcon from 'assets/icons/linkedin.svg';
+import linkedInIcon from 'assets/icons/linkedIn.svg';
 
 const Contact: React.FC = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
