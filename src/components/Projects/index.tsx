@@ -5,7 +5,7 @@ import projects from 'constants/projects';
 
 const Projects: React.FC = () => {
   return (
-    <div className="px-4 sm:px-16 w-full">
+    <div className="px-4 sm:px-0 w-full">
       <div className="flex items-center justify-center sm:items-start sm:justify-start">
         <h2 className="text-2xl md:text-4xl text-center mb-4 sm:mb-8">Projects</h2>
       </div>

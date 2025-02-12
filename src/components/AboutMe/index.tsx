@@ -5,7 +5,7 @@ import { useGlobalContext } from 'contexts/GlobalContext';
 const AboutMe: React.FC = () => {
   const { isMobile } = useGlobalContext();
   return (
-    <div className="flex flex-col justify-center items-center sm:items-start  text-sm sm:text-lg px-4 sm:px-16 sm:pt-24">
+    <div className="flex flex-col justify-center items-center sm:items-start  text-sm sm:text-lg px-4 sm:px-0 sm:pt-24">
       <span className="text-2xl sm:text-4xl">About Me</span>
       <div className="flex gap-8 items-start flex-col sm:flex-row">
         <div className="flex-2 text-justify ">

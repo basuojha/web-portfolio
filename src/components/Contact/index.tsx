@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, CircleCheck } from 'lucide-react';
+import { Mail, Phone, CircleCheck } from 'lucide-react';
 import { useForm, ValidationError } from '@formspree/react';
+import gitHubIcon from 'assets/icons/github.svg';
+import linkedInIcon from 'assets/icons/linkedin.svg';
 
 const Contact: React.FC = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -16,11 +18,11 @@ const Contact: React.FC = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-full px-4 sm:pt-[96px] sm:w-1/2"
+      className="w-full px-4 sm:mt-6 sm:w-1/2"
     >
-      <div className="bg-gray-900 p-6 rounded-2xl mt-6">
-        <h2 className="text-2xl md:text-4xl mb-6 text-center">
-          <span>{`Let's Connect and Build Something Great!`}</span>
+      <div className="bg-gray-900 p-6 rounded-2xl">
+        <h2 className="text-xl md:text-4xl mb-6 text-center">
+          <span>{`Get in touch!`}</span>
         </h2>
         <div>
           <div className="flex flex-col space-y-4 mb-6">
@@ -32,10 +34,20 @@ const Contact: React.FC = () => {
               <Phone className="text-blue-400" />
               <span>+44 7349717211</span>
             </a>
-            <div className="flex items-center space-x-3">
-              <MapPin className="text-blue-400" />
-              <span>London, UK</span>
-            </div>
+            <a
+              className="flex items-center space-x-3 hover:cursor-pointer"
+              href="https://www.linkedin.com/in/basu-ojha"
+            >
+              <img src={linkedInIcon} alt="github" className="w-6 h-6"></img>
+              <span>LinkedIn</span>
+            </a>
+            <a
+              className="flex items-center space-x-3 hover:cursor-pointer"
+              href="https://github.com/basuojha"
+            >
+              <img src={gitHubIcon} alt="github" className="w-6 h-6"></img>
+              <span>GitHub</span>
+            </a>
           </div>
           {!formState.succeeded ? (
             <form onSubmit={handleSubmit} className="flex flex-col space-y-4">

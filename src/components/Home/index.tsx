@@ -3,7 +3,6 @@ import NavBar from 'components/NavBar';
 import Scrambler from 'components/Scrambler';
 import ProfilePhoto from 'components/ProfilePhoto';
 import Typewriter from 'typewriter-effect';
-import { motion } from 'framer-motion';
 import Skills from 'components/Skills';
 import AboutMe from 'components/AboutMe';
 import { useGlobalContext } from 'contexts/GlobalContext';
@@ -11,6 +10,8 @@ import SoftSkills from 'components/Skills/softSkills';
 import Experience from 'components/Experience';
 import Contact from 'components/Contact';
 import Projects from 'components/Projects';
+import SectionWrapper from 'components/SectionWrapper';
+import typewriterStrings from 'constants/typewriter';
 
 const Home: React.FC = () => {
   const { isMobile } = useGlobalContext();
@@ -20,13 +21,9 @@ const Home: React.FC = () => {
       <div className="fixed top-0 left-0 w-full z-50 bg-gray-900 shadow-md">
         <NavBar />
       </div>
-
-      <div className="bg-gray-900 text-white h-[100dvh] overflow-y-scroll snap-y snap-mandatory scroll-smooth ">
-        <section
-          id="home"
-          className="h-[100dvh] snap-start flex flex-col justify-center items-center px-4 sm:px-16 bg-gradient-to-b from-gray-900 to-gray-800 pt-[65px]"
-        >
-          <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-8 sm:gap-44">
+      <div className="bg-gray-900 text-white h-[100dvh] overflow-y-scroll snap-y snap-mandatory scroll-smooth">
+        <SectionWrapper id="home" className="bg-gradient-to-b from-gray-900 to-gray-800">
+          <div className="w-full flex flex-col sm:flex-row items-center justify-center sm:items-start sm:justify-start gap-8 sm:gap-44 px-4">
             <div className="flex flex-col gap-4 sm:gap-8 text-center sm:text-left items-center sm:items-start">
               <h1 className="text-2xl sm:text-5xl">
                 Hello World! 👋🏻 <br className="sm:hidden" /> My name is Basu.
@@ -34,13 +31,7 @@ const Home: React.FC = () => {
               <div className="text-lg sm:text-3xl h-[56px] sm:h-auto w-[60%] sm:w-full">
                 <Typewriter
                   options={{
-                    strings: [
-                      'Hi! Welcome to my portfolio!',
-                      'Salut! Bienvenue sur mon portfolio!',
-                      'Ciao! Benvenuto nel mio portfolio!',
-                      'Namaste! Mere portfolio main aapka swaagat hai!',
-                      'Hi! Willkommen in meinem Portfolio!',
-                    ],
+                    strings: typewriterStrings,
                     autoStart: true,
                     loop: true,
                   }}
@@ -51,7 +42,7 @@ const Home: React.FC = () => {
                   <ProfilePhoto />
                 </div>
               )}
-              <p className="pt-2 px-4 sm:pt-0 sm:px-0 text-sm sm:text-xl text-justify">
+              <p className="pt-2 sm:pt-0 sm:px-0 text-sm sm:text-xl text-justify">
                 A Senior Software Developer with a knack for building high-performance web
                 applications using JavaScript, React, and TypeScript. I turn complex challenges into
                 elegant, scalable solutions that elevate user experiences. Passionate about crafting
@@ -65,66 +56,45 @@ const Home: React.FC = () => {
               </div>
             )}
           </div>
-        </section>
+        </SectionWrapper>
 
-        <section
+        <SectionWrapper
           id="skills"
-          className="h-[100dvh] snap-start flex flex-col justify-center pt-[65px] sm:pt-0 items-center px-4 bg-gradient-to-b from-gray-800 to-gray-700"
+          className="bg-gradient-to-b from-gray-800 to-gray-700 flex flex-col"
         >
-          <div className="w-full max-w-4xl sm:max-w-full sm:px-16">
-            <motion.div
-              transition={{
-                type: 'tween',
-                duration: 0.3,
-                ease: 'easeInOut',
-                bounce: 0,
-              }}
-              className="flex justify-center sm:justify-start w-full"
-            >
-              <h2 className="text-2xl sm:text-4xl text-white">Skills</h2>
-            </motion.div>
-            <Skills />
+          <div className="flex items-center justify-center sm:items-start sm:justify-start w-full">
+            <h2 className="text-2xl sm:text-4xl text-white">Skills</h2>
           </div>
-        </section>
+          <Skills />
+        </SectionWrapper>
+
         {isMobile && (
-          <section
+          <SectionWrapper
             id="softSkills"
-            className="h-[100dvh] pt-[65px] sm:pt-0 snap-start flex flex-col justify-center items-center px-4 bg-gradient-to-b from-gray-900 to-gray-800"
+            className="bg-gradient-to-b from-gray-900 to-gray-800 flex flex-col"
           >
-            <div className="w-full max-w-4xl sm:max-w-full sm:px-16">
-              <div className="flex justify-center sm:justify-start w-full pb-4 sm:pb-8">
-                <h2 className="text-2xl sm:text-4xl text-white">Other Skills</h2>
-              </div>
-              <SoftSkills />
-            </div>
-          </section>
+            <h2 className="text-2xl sm:text-4xl text-white pb-4">Other Skills</h2>
+            <SoftSkills />
+          </SectionWrapper>
         )}
 
-        <section
-          id="about"
-          className="h-[100dvh] pt-[65px] sm:pt-0 snap-start flex items-center justify-center px-4 bg-gradient-to-b from-gray-800 to-gray-700"
-        >
+        <SectionWrapper id="about" className="bg-gradient-to-b from-gray-800 to-gray-700">
           <AboutMe />
-        </section>
-        <section
-          id="experience"
-          className="h-[100dvh] pt-[65px] sm:pt-0 snap-start flex items-center justify-center px-4 bg-gradient-to-b  from-gray-900 to-gray-800"
-        >
+        </SectionWrapper>
+
+        <SectionWrapper id="experience" className="bg-gradient-to-b from-gray-900 to-gray-800">
           <Experience />
-        </section>
-        <section
-          id="projects"
-          className="h-[100dvh] pt-[65px] sm:pt-0 snap-start flex items-center justify-center px-4 bg-gradient-to-b  from-gray-900 to-gray-800"
-        >
+        </SectionWrapper>
+
+        <SectionWrapper id="projects" className="bg-gradient-to-b from-gray-800 to-gray-700">
           <Projects />
-        </section>
-        <section
-          id="contact"
-          className="h-[100dvh] pt-[65px] sm:pt-0 snap-start flex items-center justify-center px-4 bg-gradient-to-b  from-gray-800 to-gray-700"
-        >
+        </SectionWrapper>
+
+        <SectionWrapper id="contact" className="bg-gradient-to-b from-gray-700 to-gray-600">
           <Contact />
-        </section>
-        <section className=" flex items-center justify-center">
+        </SectionWrapper>
+
+        <section className="flex items-center justify-center">
           <Scrambler />
         </section>
 
