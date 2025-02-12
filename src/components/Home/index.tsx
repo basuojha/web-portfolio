@@ -30,7 +30,7 @@ const Home: React.FC = () => {
               <h1 className="text-2xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-5xl">
                 Hello World! 👋🏻 <br className="sm:hidden" /> My name is Basu.
               </h1>
-              <div className="text-lg md:text-xl lg:text-2xl xl:text-3xl h-[56px] sm:h-auto w-[60%] sm:w-full">
+              <div className="text-lg md:text-xl lg:text-2xl xl:text-3xl h-[56px] sm:h-auto w-[65%] sm:w-full">
                 <Typewriter
                   options={{
                     strings: typewriterStrings,
