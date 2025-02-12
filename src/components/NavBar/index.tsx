@@ -34,7 +34,9 @@ const NavBar: React.FC = () => {
       className="bg-gradient-to-r from-gray-900 to-gray-800 z-50 shadow-lg border-b border-gray-700 sticky top-0"
     >
       <div className="flex justify-between items-center px-8 sm:px-8 py-2 sm:py-4">
-        <img src={LogoSrc} alt="logo" className="h-12 md:h-16" />
+        <a href="#home">
+          <img src={LogoSrc} alt="logo" className="h-12 md:h-16" />
+        </a>
         <div className="hidden xl:flex space-x-6">
           {navTabs.map((tab) => (
             <a
