@@ -6,7 +6,7 @@ const Scrambler: React.FC = () => {
   const [displayText, setDisplayText] = useState<string>('');
   const [hovered, setHovered] = useState<boolean>(false);
   const { isMobile } = useGlobalContext();
-  const originalText: string = `Caught you! — your friendly neighborhood developer 🧑🏻‍💻  `;
+  const originalText: string = `Caught you! — your friendly neighborhood developer   `;
 
   const getRandomText = (length: number) => {
     return Array.from({ length }, () => charset[Math.floor(Math.random() * charset.length)]).join(

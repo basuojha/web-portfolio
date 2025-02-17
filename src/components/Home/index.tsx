@@ -12,7 +12,8 @@ import Contact from 'components/Contact';
 import Projects from 'components/Projects';
 import SectionWrapper from 'components/SectionWrapper';
 import typewriterStrings from 'constants/typewriter';
-
+import ScrollIndicator from 'components/ScrollIndicator';
+import { resumeURL } from 'constants/urls';
 const Home: React.FC = () => {
   const { isMobile } = useGlobalContext();
 
@@ -42,18 +43,43 @@ const Home: React.FC = () => {
                   <ProfilePhoto />
                 </div>
               )}
-              <p className="pt-2 sm:pt-0 sm:px-0 text-sm sm:text-base md:text-lg lg:text-xl text-justify">
-                A Senior Software Developer with a knack for building high-performance web
-                applications using JavaScript, React, and TypeScript. I turn complex challenges into
-                elegant, scalable solutions that elevate user experiences. Passionate about crafting
-                seamless, intuitive UIs with industry-best practices and modern frameworks. Always
-                pushing the boundaries of web performance, accessibility, and maintainability.
-              </p>
+              <div className="flex flex-col gap-8">
+                <p className="pt-2 sm:pt-0 sm:px-0 text-sm sm:text-base md:text-lg lg:text-xl text-justify">
+                  A Senior Software Developer with a knack for building high-performance web
+                  applications using JavaScript, React, and TypeScript. I turn complex challenges
+                  into elegant, scalable solutions that elevate user experiences. Passionate about
+                  crafting seamless, intuitive UIs with industry-best practices and modern
+                  frameworks. Always pushing the boundaries of web performance, accessibility, and
+                  maintainability.
+                </p>
+                {!isMobile && (
+                  <a
+                    className="rounded-lg w-fit h-auto text-lg font-medium px-4 py-2 hover:bg-slate-500 bg-slate-600"
+                    target="_blank"
+                    rel="noreferrer"
+                    href={resumeURL}
+                  >
+                    <span>📄</span>
+                    <span className="ml-2">View my CV </span>
+                  </a>
+                )}
+              </div>
             </div>
             {!isMobile && (
               <div className="flex-shrink-0">
                 <ProfilePhoto />
               </div>
+            )}
+            {isMobile && (
+              <a
+                className="rounded-lg font-medium w-auto h-auto px-4 py-2 text-sm -mt-2  bg-slate-600"
+                href={resumeURL}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>📄</span>
+                <span className="ml-1">View my CV </span>
+              </a>
             )}
           </div>
         </SectionWrapper>
@@ -110,7 +136,7 @@ const Home: React.FC = () => {
           <Contact />
         </SectionWrapper>
 
-        <section className="flex items-center justify-center py-8">
+        <section className="flex items-center justify-center py-1 sm:py-2">
           <Scrambler />
         </section>
 
@@ -118,6 +144,7 @@ const Home: React.FC = () => {
           <p className="text-sm">© {new Date().getFullYear()} Basu Ojha. All rights reserved.</p>
         </footer>
       </div>
+      <ScrollIndicator />
     </div>
   );
 };
