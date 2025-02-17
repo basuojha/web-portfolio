@@ -37,30 +37,6 @@ const Experience: React.FC = () => {
           ))}
         </motion.div>
       </div>
-      {/* <div className="relative overflow-hidden mt-2 w-full">
-        <motion.div
-          className="flex space-x-6 overflow-x-auto scrollbar-hide"
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.6 }}
-        >
-          {educationList.map((edu, index) => (
-            <motion.div
-              key={index}
-              className={`min-w-full md:min-w-[45%] lg:min-w-[30%] bg-gray-900 rounded-2xl p-6 shadow-xl
-            `}
-            >
-              <div className="flex gap-4 justify-between">
-                <h3 className="text-base xl:text-xl font-semibold w-[80%]">{edu.title}</h3>
-                <GraduationCap className="h-6 w-6" />
-              </div>
-              <p className="text-gray-400 mt-1">{edu.university}</p>
-              <p className="text-sm text-gray-500 mt-1">{edu.duration}</p>
-              <p className="text-sm mt-4">{edu.gpa}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div> */}
     </div>
   );
 };
