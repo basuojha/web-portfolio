@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import LogoSrc from 'assets/logos/logo.svg';
+import LogoSrc from 'assets/icons/favicon.svg';
 import { Menu as MenuIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useClickAway } from 'react-use';
