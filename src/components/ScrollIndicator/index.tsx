@@ -24,7 +24,7 @@ export default function ScrollIndicator() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-8 right-7 flex flex-col items-center z-50 ease-in-out transform">
+    <div className="fixed bottom-8 right-7 flex flex-col items-center z-50 ease-in-out transform pointer-events-none">
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}
