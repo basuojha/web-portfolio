@@ -23,6 +23,14 @@ const projects = [
       'Boosted Housing.com’s SEO rankings by 12% and improved user engagement with a hybrid pagination approach.',
   },
   {
+    title: 'New Employee Onboarding Portal (HRIS Team)',
+    type: 'Housing.com',
+    role: 'Lead Frontend Developer',
+    techStack: 'React.js, Emotion CSS, Docker',
+    impact:
+      'Led the frontend development of a dynamic, user-friendly portal that optimized the hiring process, improving candidate onboarding speed and reducing manual intervention by 30%',
+  },
+  {
     title: 'PMS Portal - Performance Evaluation (HRIS Team)',
     type: 'Housing.com',
     role: 'Chief Architect, Designer, and Lead Developer',
@@ -32,7 +40,7 @@ const projects = [
   },
   {
     title: 'Kafka-Based Notification System (PropTiger Team)',
-    type: 'PropTiger',
+    type: 'Proptiger.com',
     role: 'Full Stack Developer',
     techStack: 'React.js, Node.js, Kafka',
     impact:
