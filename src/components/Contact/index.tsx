@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, CircleCheck } from 'lucide-react';
+import { Mail, CircleCheck } from 'lucide-react';
 import { useForm, ValidationError } from '@formspree/react';
 import gitHubIcon from 'assets/icons/github.svg';
 import linkedInIcon from 'assets/icons/linkedIn.svg';
@@ -32,17 +32,10 @@ const Contact: React.FC = () => {
           <div className="flex flex-col space-y-4 mb-6">
             <a
               className="flex items-center space-x-3 text-sm md:text-base lg:text-lg"
-              href="mailto:basuojha25@gmail.com"
+              href="mailto:basuojhadev@gmail.com"
             >
               <Mail className="text-blue-400 w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
-              <span>basuojha25@gmail.com</span>
-            </a>
-            <a
-              className="flex items-center space-x-3 text-sm md:text-base lg:text-lg"
-              href="tel:+447349717211"
-            >
-              <Phone className="text-blue-400 w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
-              <span>+44 7349717211</span>
+              <span>basuojhadev@gmail.com</span>
             </a>
             <a
               className="flex items-center space-x-3 text-sm md:text-base lg:text-lg hover:cursor-pointer"
