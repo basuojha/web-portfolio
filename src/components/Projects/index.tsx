@@ -19,7 +19,8 @@ const Projects: React.FC = () => {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className="min-w-full md:min-w-[45%] lg:min-w-[30%] bg-gray-900 rounded-2xl p-6 shadow-xl"
+              className="min-w-full md:min-w-[45%] lg:min-w-[30%] bg-gray-900 rounded-2xl p-6 shadow-xl cursor-pointer"
+              onClick={() => project.url && window.open(project.url, '_blank')}
             >
               <div className="flex gap-4 justify-between">
                 <h3 className="text-base xl:text-xl font-semibold w-[80%]">{project.title}</h3>

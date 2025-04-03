@@ -14,6 +14,9 @@ import SectionWrapper from 'components/SectionWrapper';
 import typewriterStrings from 'constants/typewriter';
 import ScrollIndicator from 'components/ScrollIndicator';
 import { resumeURL } from 'constants/urls';
+import gitHubIcon from 'assets/icons/github.svg';
+import linkedInIcon from 'assets/icons/linkedIn.svg';
+
 const Home: React.FC = () => {
   const { isMobile } = useGlobalContext();
 
@@ -53,15 +56,43 @@ const Home: React.FC = () => {
                   maintainability.
                 </p>
                 {!isMobile && (
-                  <a
-                    className="rounded-lg w-fit h-auto text-lg font-medium px-4 py-2 hover:bg-slate-500 bg-slate-600"
-                    target="_blank"
-                    rel="noreferrer"
-                    href={resumeURL}
-                  >
-                    <span>📄</span>
-                    <span className="ml-2">View my CV </span>
-                  </a>
+                  <div className="flex gap-4">
+                    <a
+                      className="rounded-lg w-fit h-auto text-lg font-medium px-4 py-2 hover:bg-slate-500 bg-slate-600"
+                      target="_blank"
+                      rel="noreferrer"
+                      href={resumeURL}
+                    >
+                      <span>📄</span>
+                      <span className="ml-2">View my CV </span>
+                    </a>
+                    <a
+                      className="flex items-center space-x-2 text-sm md:text-base lg:text-lg px-4 py-2 rounded-lg w-fit h-auto hover:cursor-pointer hover:bg-slate-500 bg-slate-600"
+                      href="https://www.linkedin.com/in/basu-ojha"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img
+                        src={linkedInIcon}
+                        alt="LinkedIn"
+                        className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
+                      />
+                      <span>LinkedIn</span>
+                    </a>
+                    <a
+                      className="flex items-center space-x-2 text-sm md:text-base lg:text-lg px-4 py-2 rounded-lg w-fit h-auto hover:cursor-pointer hover:bg-slate-500 bg-slate-600"
+                      href="https://github.com/basuojha"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img
+                        src={gitHubIcon}
+                        alt="GitHub"
+                        className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
+                      />
+                      <span>GitHub</span>
+                    </a>
+                  </div>
                 )}
               </div>
             </div>
@@ -71,15 +102,41 @@ const Home: React.FC = () => {
               </div>
             )}
             {isMobile && (
-              <a
-                className="rounded-lg font-medium w-auto h-auto px-4 py-2 text-sm -mt-2  bg-slate-600"
-                href={resumeURL}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>📄</span>
-                <span className="ml-1">View my CV </span>
-              </a>
+              <div className="flex gap-4">
+                <a
+                  className="flex rounded-lg font-medium w-auto h-10 px-4 py-2.5 text-sm bg-slate-600 align-middle justify-center"
+                  href={resumeURL}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="text-sm">📄</span>
+                  <span className="ml-1">View my CV </span>
+                </a>
+                <a
+                  className="flex items-center space-x-1 text-sm w-fit h-10 hover:cursor-pointer"
+                  href="https://www.linkedin.com/in/basu-ojha"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={linkedInIcon}
+                    alt="LinkedIn"
+                    className="w-10 h-10 sm:w-6 sm:h-6 md:w-7 md:h-7"
+                  />
+                </a>
+                <a
+                  className="flex items-center space-x-1 text-sm w-fit h-10 hover:cursor-pointer"
+                  href="https://github.com/basuojha"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={gitHubIcon}
+                    alt="GitHub"
+                    className="w-10 h-10 sm:w-6 sm:h-6 md:w-7 md:h-7"
+                  />
+                </a>
+              </div>
             )}
           </div>
         </SectionWrapper>

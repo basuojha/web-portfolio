@@ -4,6 +4,7 @@ const projects = [
     type: 'Personal Project',
     role: 'Full Stack Developer',
     techStack: 'React.js, TypeScript, Tailwind CSS, GitHub Actions, AWS (S3 & CloudFront)',
+    url: 'https://github.com/basuojha/web-portfolio',
     impact:
       'Built a high-performance portfolio website with React and TypeScript, featuring dynamic sections for projects, experience, and skills. Implemented CI/CD using GitHub Actions and deployed on AWS, ensuring seamless updates and professional-grade deployment practices.',
   },
@@ -11,6 +12,7 @@ const projects = [
     title: 'Snackerint - Food Delivery Web App',
     type: 'Personal Project - WIP',
     role: 'Full Stack Developer',
+    url: 'https://github.com/basuojha/snackate',
     techStack: 'React.js, Tailwind CSS, Redux, Node.js, MongoDB',
     impact: 'Created a modern-cart based food delivery system that provides a complete web.',
   },
